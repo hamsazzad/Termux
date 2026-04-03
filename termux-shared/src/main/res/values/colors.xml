@@ -28,4 +28,18 @@
     <color name="red_error_link">#FFEA4335</color>
     <color name="blue_link_light">#FF4285F4</color>
     <color name="blue_link_dark">#FFAECBFA</color>
+
+    <!-- Surface and text colors for light/dark themes -->
+    <color name="surface_light">#FFFAFAFA</color>
+    <color name="surface_variant_light">#FFF1F3F4</color>
+    <color name="text_primary_light">#FF202124</color>
+
+    <color name="surface_dark">#FF1E1E1E</color>
+    <color name="surface_variant_dark">#FF2D2D2D</color>
+    <color name="text_primary_dark">#FFFAFAFA</color>
+
+
+    <!-- Google Blue light (for dark mode links) -->
+    <color name="google_blue_light">#FF8AB4F8</color>
+
 </resources>
