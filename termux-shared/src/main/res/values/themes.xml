@@ -43,30 +43,30 @@
     <style name="Theme.MarkdownViewActivity.DayNight" parent="Theme.MediaViewActivity.DayNight"/>
 
     <!-- Dialog overlay -->
-    <style name="ThemeOverlay.BaseDialog.DayNight" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+    <style name="ThemeOverlay.BaseDialog.DayNight" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="colorPrimary">@color/google_blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="materialAlertDialogTitlePanelStyle">@style/BaseDialog.Title.Panel</item>
         <item name="materialAlertDialogBodyTextStyle">@style/BaseDialog.Message.Text.DayNight</item>
     </style>
 
-    <style name="BaseDialog.Title.Panel" parent="@style/MaterialAlertDialog.Material3.Title.Panel">
+    <style name="BaseDialog.Title.Panel" parent="@style/MaterialAlertDialog.MaterialComponents.Title.Panel">
         <item name="android:background">@color/google_blue</item>
         <item name="android:paddingTop">14dp</item>
         <item name="android:paddingBottom">14dp</item>
     </style>
 
-    <style name="BaseDialog.Message.Text.Light" parent="@style/MaterialAlertDialog.Material3.Body.Text">
+    <style name="BaseDialog.Message.Text.Light" parent="@style/MaterialAlertDialog.MaterialComponents.Body.Text">
         <item name="android:textColorPrimary">@color/text_primary_light</item>
         <item name="android:textColorLink">@color/google_blue</item>
     </style>
 
-    <style name="BaseDialog.Message.Text.Dark" parent="@style/MaterialAlertDialog.Material3.Body.Text">
+    <style name="BaseDialog.Message.Text.Dark" parent="@style/MaterialAlertDialog.MaterialComponents.Body.Text">
         <item name="android:textColorPrimary">@color/text_primary_dark</item>
         <item name="android:textColorLink">@color/blue_link_dark</item>
     </style>
 
-    <style name="BaseDialog.Message.Text.DayNight" parent="@style/MaterialAlertDialog.Material3.Body.Text">
+    <style name="BaseDialog.Message.Text.DayNight" parent="@style/MaterialAlertDialog.MaterialComponents.Body.Text">
         <item name="android:textColorLink">@color/google_blue</item>
     </style>
 
