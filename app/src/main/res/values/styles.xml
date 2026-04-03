@@ -1,17 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="TermuxAlertDialogStyle" parent="@android:style/Theme.Material.Light.Dialog.Alert">
-        <!-- Seen in buttons on alert dialog: -->
-        <item name="android:colorAccent">#212121</item>
+    <!-- Dialog style -->
+    <style name="TermuxAlertDialogStyle" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/google_blue</item>
     </style>
 
-    <style name="TermuxActivity.Drawer.ButtonBarStyle.Light" parent="@style/Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textColor">@color/black</item>
+    <!-- Drawer button styles -->
+    <style name="TermuxActivity.Drawer.ButtonBarStyle.Light" parent="@style/Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/google_blue</item>
+        <item name="iconTint">@color/google_blue</item>
     </style>
 
-    <style name="TermuxActivity.Drawer.ButtonBarStyle.Dark" parent="@style/Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textColor">@color/white</item>
+    <style name="TermuxActivity.Drawer.ButtonBarStyle.Dark" parent="@style/Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/google_blue</item>
+        <item name="iconTint">@color/google_blue</item>
+    </style>
+
+    <!-- Session list item text -->
+    <style name="TermuxSessionListItemText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- FAB style -->
+    <style name="TermuxFABStyle" parent="@style/Widget.Material3.ExtendedFloatingActionButton">
+        <item name="backgroundTint">@color/google_blue</item>
+        <item name="tint">@color/white</item>
+        <item name="elevation">6dp</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <!-- Settings card style -->
+    <style name="TermuxSettingsCard" parent="@style/Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="contentPaddingLeft">16dp</item>
+        <item name="contentPaddingRight">16dp</item>
+        <item name="contentPaddingTop">8dp</item>
+        <item name="contentPaddingBottom">8dp</item>
+    </style>
+
+    <!-- Switch preference style -->
+    <style name="TermuxSwitchPreference" parent="@style/PreferenceThemeOverlay.v14.Material">
+        <item name="colorControlActivated">@color/google_blue</item>
+        <item name="colorSwitchThumbNormal">@color/google_blue_light</item>
+    </style>
+
+    <!-- Toolbar style -->
+    <style name="TermuxToolbar" parent="@style/Widget.Material3.Toolbar">
+        <item name="android:background">@color/google_blue</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="navigationIconTint">@color/white</item>
     </style>
 
 </resources>

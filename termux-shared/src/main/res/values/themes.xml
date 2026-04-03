@@ -1,102 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!--
-     The light themes are only for day mode and must not be defined in night/theme.xml.
-     https://material.io/develop/android/theming/dark
-    -->
 
-    <!--
-      BaseActivity Light DarkActionBar theme.
-      https://github.com/material-components/material-components-android/blob/1.4.0/lib/java/com/google/android/material/theme/res/values/themes.xml#L33
-     -->
-    <style name="Theme.BaseActivity.Light.DarkActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/red_400</item>
-        <item name="colorPrimaryVariant">@color/red_800</item>
+    <!-- BaseActivity Light DarkActionBar theme (Material 3 / Google 2026) -->
+    <style name="Theme.BaseActivity.Light.DarkActionBar" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/google_blue</item>
+        <item name="colorPrimaryVariant">@color/google_blue_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/grey_900</item>
-        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorSecondary">@color/google_green</item>
+        <item name="colorSecondaryVariant">@color/google_green_dark</item>
         <item name="colorOnSecondary">@color/white</item>
-
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <item name="colorPrimaryDark" tools:targetApi="l">?attr/colorPrimary</item>
-
-        <!-- Text color. -->
-        <item name="android:textColorPrimary">@color/black</item>
-        <item name="android:textColorLink">@color/blue_link_light</item>
-
-        <!--
-         Dialog Themes.
-         These MUST be defined for the application `android:theme` so that if dialogs
-         are shown from non-activity context with TYPE_SYSTEM_ALERT, the correct dialog theme is
-         applied, otherwise exceptions like `UnsupportedOperationException: Failed to resolve attribute
-         at index... TypedValue` will be thrown, since ThemeOverlay would have all the activity
-         theme attributes defined.
-        -->
+        <item name="colorError">@color/google_red</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="android:colorBackground">@color/surface_light</item>
+        <item name="colorSurface">@color/surface_light</item>
+        <item name="colorOnSurface">@color/text_primary_light</item>
+        <item name="colorSurfaceVariant">@color/surface_variant_light</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="colorPrimaryDark" tools:targetApi="l">@color/google_blue_dark</item>
+        <item name="android:textColorPrimary">@color/text_primary_light</item>
+        <item name="android:textColorLink">@color/google_blue</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
         <item name="alertDialogTheme">@style/ThemeOverlay.BaseDialog.DayNight</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.BaseDialog.DayNight</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
-    <!-- BaseActivity Light NoActionBar theme. -->
+    <!-- BaseActivity Light NoActionBar theme -->
     <style name="Theme.BaseActivity.Light.NoActionBar" parent="Theme.BaseActivity.Light.DarkActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-
-
-    <!-- BaseActivity DayNight DarkActionBar theme. -->
+    <!-- BaseActivity DayNight themes -->
     <style name="Theme.BaseActivity.DayNight.DarkActionBar" parent="Theme.BaseActivity.Light.DarkActionBar"/>
-    <!-- BaseActivity DayNight NoActionBar theme. -->
     <style name="Theme.BaseActivity.DayNight.NoActionBar" parent="Theme.BaseActivity.Light.NoActionBar"/>
 
-
-
-    <!-- BaseActivity extended classes Day NoActionBar themes. -->
+    <!-- MediaView / MarkdownView -->
     <style name="Theme.MediaViewActivity.Light" parent="Theme.BaseActivity.Light.NoActionBar"/>
     <style name="Theme.MarkdownViewActivity.Light" parent="Theme.MediaViewActivity.Light"/>
-
-    <!-- BaseActivity extended classes DayNight NoActionBar themes. -->
     <style name="Theme.MediaViewActivity.DayNight" parent="Theme.BaseActivity.DayNight.NoActionBar"/>
     <style name="Theme.MarkdownViewActivity.DayNight" parent="Theme.MediaViewActivity.DayNight"/>
 
-
-
-
-
-    <!--
-      BaseDialog Light theme.
-      https://github.com/material-components/material-components-android/blob/1.4.0/lib/java/com/google/android/material/dialog/res/values/themes.xml#L70
-     -->
-    <style name="ThemeOverlay.BaseDialog.Light" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/red_400</item>
-        <item name="colorPrimaryVariant">@color/red_800</item>
+    <!-- Dialog overlay -->
+    <style name="ThemeOverlay.BaseDialog.DayNight" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/google_blue</item>
         <item name="colorOnPrimary">@color/white</item>
-
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/grey_900</item>
-        <item name="colorSecondaryVariant">@color/black</item>
-        <item name="colorOnSecondary">@color/white</item>
-
-        <!-- Surface color. -->
-        <item name="colorSurface">@color/design_default_color_surface</item>
-        <item name="colorOnSurface">@color/design_default_color_on_surface</item>
-
-        <!-- Dialog title panel style. -->
         <item name="materialAlertDialogTitlePanelStyle">@style/BaseDialog.Title.Panel</item>
-
-        <!-- Dialog message text style. -->
-        <item name="materialAlertDialogBodyTextStyle">@style/BaseDialog.Message.Text.Light</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/BaseDialog.Message.Text.DayNight</item>
     </style>
 
-    <!-- BaseDialog DayNight theme. -->
-    <style name="ThemeOverlay.BaseDialog.DayNight" parent="ThemeOverlay.BaseDialog.Light"/>
+    <style name="BaseDialog.Title.Panel" parent="@style/MaterialAlertDialog.Material3.Title.Panel">
+        <item name="android:background">@color/google_blue</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
 
-    <!-- BaseDialog extended classes DayNight themes. -->
-    <style name="ThemeOverlay.MessageDialog.DayNight" parent="ThemeOverlay.BaseDialog.DayNight"/>
+    <style name="BaseDialog.Message.Text.Light" parent="@style/MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textColorPrimary">@color/text_primary_light</item>
+        <item name="android:textColorLink">@color/google_blue</item>
+    </style>
+
+    <style name="BaseDialog.Message.Text.Dark" parent="@style/MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textColorPrimary">@color/text_primary_dark</item>
+        <item name="android:textColorLink">@color/blue_link_dark</item>
+    </style>
+
+    <style name="BaseDialog.Message.Text.DayNight" parent="@style/MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textColorLink">@color/google_blue</item>
+    </style>
+
+    <style name="ViewDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
 
 </resources>

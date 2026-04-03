@@ -6,18 +6,26 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="red_400">#FF0000</color>
-    <color name="red_800">#C4001D</color>
+    <!-- Google Brand Colors -->
+    <color name="google_blue">#FF4285F4</color>
+    <color name="google_blue_dark">#FF1A73E8</color>
+    <color name="google_red">#FFEA4335</color>
+    <color name="google_red_dark">#FFC5221F</color>
+    <color name="google_yellow">#FFFBBC05</color>
+    <color name="google_green">#FF34A853</color>
+    <color name="google_green_dark">#FF1E8E3E</color>
 
+    <!-- Legacy compat -->
+    <color name="red_400">#FFEA4335</color>
+    <color name="red_800">#FFC5221F</color>
     <color name="grey_200">#EEEEEE</color>
     <color name="grey_400">#BDBDBD</color>
     <color name="grey_500">#9E9E9E</color>
     <color name="grey_800">#424242</color>
     <color name="grey_900">#212121</color>
 
-    <color name="red_error">#DC143C</color>
-    <color name="red_error_link">#FC143C</color>
-
-    <color name="blue_link_light">#0969DA</color>
-    <color name="blue_link_dark">#58A6FF</color>
+    <color name="red_error">#FFEA4335</color>
+    <color name="red_error_link">#FFEA4335</color>
+    <color name="blue_link_light">#FF4285F4</color>
+    <color name="blue_link_dark">#FFAECBFA</color>
 </resources>

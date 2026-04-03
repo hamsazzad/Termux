@@ -1,14 +1,17 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
         app:key="view"
-        app:title="@string/termux_terminal_view_view_header">
+        app:title="@string/termux_terminal_view_view_header"
+        app:iconSpaceReserved="false">
 
         <SwitchPreferenceCompat
             app:key="terminal_margin_adjustment"
             app:summaryOff="@string/termux_terminal_view_terminal_margin_adjustment_off"
             app:summaryOn="@string/termux_terminal_view_terminal_margin_adjustment_on"
-            app:title="@string/termux_terminal_view_terminal_margin_adjustment_title" />
+            app:title="@string/termux_terminal_view_terminal_margin_adjustment_title"
+            app:iconSpaceReserved="false" />
 
     </PreferenceCategory>
 
