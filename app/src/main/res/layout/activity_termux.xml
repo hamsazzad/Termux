@@ -23,22 +23,36 @@
             android:layout_above="@+id/terminal_toolbar_view_pager"
             android:layout_height="match_parent">
 
-            <!-- Terminal view with rounded card container -->
+            <!-- Terminal view with modern rounded card -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.termux.view.TerminalView
-                    android:id="@+id/terminal_view"
+                <!-- MaterialCardView gives the terminal 16dp rounded corners
+                     and an 8dp floating margin for the modern 2026 look -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/terminal_card"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:defaultFocusHighlightEnabled="false"
-                    android:focusableInTouchMode="true"
-                    android:scrollbarThumbVertical="@drawable/terminal_scroll_shape"
-                    android:scrollbars="vertical"
-                    tools:ignore="UnusedAttribute" />
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp"
+                    app:cardBackgroundColor="@android:color/black">
 
-                <!-- Floating Action Button -->
+                    <com.termux.view.TerminalView
+                        android:id="@+id/terminal_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:defaultFocusHighlightEnabled="false"
+                        android:focusableInTouchMode="true"
+                        android:scrollbarThumbVertical="@drawable/terminal_scroll_shape"
+                        android:scrollbars="vertical"
+                        tools:ignore="UnusedAttribute" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- FAB sits above the card so it is never clipped by rounded corners -->
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab_quick_actions"
                     android:layout_width="wrap_content"
