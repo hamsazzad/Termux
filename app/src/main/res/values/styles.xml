@@ -7,12 +7,12 @@
     </style>
 
     <!-- Drawer button styles -->
-    <style name="TermuxActivity.Drawer.ButtonBarStyle.Light" parent="@style/Widget.Material3.Button.TextButton">
+    <style name="TermuxActivity.Drawer.ButtonBarStyle.Light" parent="@style/Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/google_blue</item>
         <item name="iconTint">@color/google_blue</item>
     </style>
 
-    <style name="TermuxActivity.Drawer.ButtonBarStyle.Dark" parent="@style/Widget.Material3.Button.TextButton">
+    <style name="TermuxActivity.Drawer.ButtonBarStyle.Dark" parent="@style/Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/google_blue</item>
         <item name="iconTint">@color/google_blue</item>
     </style>
@@ -25,7 +25,7 @@
     </style>
 
     <!-- FAB style -->
-    <style name="TermuxFABStyle" parent="@style/Widget.Material3.ExtendedFloatingActionButton">
+    <style name="TermuxFABStyle" parent="@style/Widget.MaterialComponents.FloatingActionButton">
         <item name="backgroundTint">@color/google_blue</item>
         <item name="tint">@color/white</item>
         <item name="elevation">6dp</item>
@@ -33,7 +33,7 @@
     </style>
 
     <!-- Settings card style -->
-    <style name="TermuxSettingsCard" parent="@style/Widget.Material3.CardView.Elevated">
+    <style name="TermuxSettingsCard" parent="@style/Widget.MaterialComponents.CardView">
         <item name="cardCornerRadius">16dp</item>
         <item name="cardElevation">2dp</item>
         <item name="contentPaddingLeft">16dp</item>
@@ -49,7 +49,7 @@
     </style>
 
     <!-- Toolbar style -->
-    <style name="TermuxToolbar" parent="@style/Widget.Material3.Toolbar">
+    <style name="TermuxToolbar" parent="@style/Widget.MaterialComponents.Toolbar">
         <item name="android:background">@color/google_blue</item>
         <item name="titleTextColor">@color/white</item>
         <item name="navigationIconTint">@color/white</item>
