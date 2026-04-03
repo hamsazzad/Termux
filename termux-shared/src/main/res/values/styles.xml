@@ -5,12 +5,26 @@
         <item name="colorPrimary">@color/google_blue</item>
     </style>
 
-    <style name="TermuxActivity.Drawer.ButtonBarStyle.Light" parent="@style/Widget.Material3.Button.TextButton">
+    <style name="TermuxActivity.Drawer.ButtonBarStyle.Light" parent="@style/Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/google_blue</item>
     </style>
 
-    <style name="TermuxActivity.Drawer.ButtonBarStyle.Dark" parent="@style/Widget.Material3.Button.TextButton">
+    <style name="TermuxActivity.Drawer.ButtonBarStyle.Dark" parent="@style/Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/google_blue</item>
+    </style>
+
+
+    <!-- Toolbar text appearances -->
+    <style name="TextAppearance.Widget.BaseToolbar.Title" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.Widget.BaseToolbar.Subtitle" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#CCFFFFFF</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
 </resources>
