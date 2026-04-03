@@ -251,6 +251,8 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
         setToggleKeyboardView();
 
+        setFabView();
+
         registerForContextMenu(mTerminalView);
 
         FileReceiverActivity.updateFileReceiverActivityComponentsState(this);
@@ -591,6 +593,22 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         findViewById(R.id.toggle_keyboard_button).setOnLongClickListener(v -> {
             toggleTerminalToolbar();
             return true;
+        });
+    }
+
+    @SuppressLint("RtlHardcoded")
+    private void setFabView() {
+        View fab = findViewById(R.id.fab_quick_actions);
+        if (fab == null) return;
+        fab.setOnClickListener(v -> {
+            DrawerLayout drawer = getDrawer();
+            if (drawer != null) {
+                if (drawer.isDrawerOpen(Gravity.LEFT)) {
+                    drawer.closeDrawer(Gravity.LEFT);
+                } else {
+                    drawer.openDrawer(Gravity.LEFT);
+                }
+            }
         });
     }
 
